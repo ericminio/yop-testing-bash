@@ -17,4 +17,4 @@ jobs:
       - name: run tests
         run: |
           chmod +x ./dist/test.sh
-          docker compose -f .github/workflows/docker-compose.yml run --rm bash ./dist/test.sh ./about
+          docker compose -f .github/workflows/support/docker-compose.yml run --rm bash ./dist/test.sh ./about
