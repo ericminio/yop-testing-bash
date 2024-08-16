@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+  bash:
+    build: .
+    image: bash:alpine
+    container_name: bash
+    volumes:
+      - ../..:/usr/local/src

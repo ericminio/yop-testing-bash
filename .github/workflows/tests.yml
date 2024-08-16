@@ -1,0 +1,20 @@
+name: yop testing bash
+
+on: push
+
+jobs:
+  test:
+    name: run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: update /etc/hosts
+        run: |
+          sudo echo "172.17.0.1 host.docker.internal" | sudo tee -a /etc/hosts
+          cat /etc/hosts
+      - name: run tests
+        run: |
+          chmod +x ./dist/test.sh
+          docker compose -f .github/workflows/docker-compose.yml run --rm bash ./dist/test.sh ./about

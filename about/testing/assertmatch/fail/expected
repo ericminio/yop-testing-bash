@@ -1,0 +1,7 @@
+test_assertmatch_fail
+
+[0;91mtest_assertmatch_fail[0m
+[0;101;30mFAIL[0m
+
+Expected to match: hello world 
+But was          : hello pretty world

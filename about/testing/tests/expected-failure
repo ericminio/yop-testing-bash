@@ -1,0 +1,7 @@
+test_failure
+
+[0;91mtest_failure[0m
+[0;101;30mFAIL[0m
+
+Expected: 2 
+But was : 1
